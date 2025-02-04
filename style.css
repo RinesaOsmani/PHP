@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display:grid;
+    grid-template-rows: 20% 50px 300px auto;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1em;
+}
+.wrapper>* {
+    border: 1px solid black;
+  
+}
+.wrapper>header{
+    background-color: #ddd;
+    grid-column-start: 1;
+        grid-column-end: 3;
+        
+    }
+
+.wrapper>nav{
+    background-color: #eee;
+    grid-column-start: 1;
+        grid-column-end: 3;
+}
+
+.wrapper>article{
+    background-color: #ccc;
+}
+
+.wrapper>aside{
+    background-color: #000;
+    color:white;
+}
+
+.wrapper>footer{
+    background-color: #ddd;
+    grid-column-start: 1;
+        grid-column-end: 3;
+}
