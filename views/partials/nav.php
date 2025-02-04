@@ -9,15 +9,21 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="/Home"
-                            class="rounded-md text-gray-300 hover:bg-gray-700 px-3 py-2 text-sm font-medium text-white"
-                            aria-current="page">Home</a>
-                        <a href="/About"
-                            class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-                        <a href="/Contact"
-                            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
-                        <a href="/Contact"
-                            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Testings</a>
+                        <a href="/"
+                            class="<?= $_SERVER['REQUEST_URI'] === '/' ? 'bg-red-900 text-white' : 'text-gray-300'; ?>"
+                            aria-current="page"><?= $heading ?></a>
+
+
+
+
+
+
+
+                        <a href="/about.php"
+                            class="<?= $_SERVER['REQUEST_URI'] === '/about.php' ? 'bg-red-900' : 'text-gray-300'; ?>">About</a>
+                        <a href="/contact.php"
+                            class="<?= $_SERVER['REQUEST_URI'] === '/contact.php' ? 'bg-gray-900' : 'text-gray-300'; ?>rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+
                     </div>
                 </div>
             </div>
