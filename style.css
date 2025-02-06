@@ -3,6 +3,7 @@
 }
 
 nav ul {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 50px;
@@ -31,7 +32,7 @@ nav ul li:hover {
 
 .wrapper {
     display: grid;
-    grid-template-rows: 20% auto 500px 100px;
+    grid-template-rows: 150px repeat(3,auto);
     grid-template-columns: 3fr 1fr;
     grid-gap: 1em;
 }
@@ -41,9 +42,23 @@ nav ul li:hover {
 }
 
 .wrapper>header {
-    background-color: #ddd;
+    text-align: center;
+    background-color: #111;
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+.wrapper>header>div:first-child{
+    font-size: 3em;
+    padding-top: 20px;
+    color:red;
+
+}
+
+.wrapper>header>div:last-child{
+    font-size: 1,5em;
+    color:#bbb;
+    font-style: italic;
 }
 
 .wrapper>nav {
@@ -53,7 +68,22 @@ nav ul li:hover {
 }
 
 .wrapper>article {
+    padding:10px;
     background-color: #ccc;
+    font-size: 1.2em;
+}
+
+.wrapper>article img{
+    float:right;
+    border:5px solid white;
+    margin: 5px;
+}
+
+.wrapper>article img:after{
+    content:'';
+    display: table;
+    clear:both;
+
 }
 
 .wrapper>aside {
@@ -61,8 +91,33 @@ nav ul li:hover {
     color: white;
 }
 
+.wrapper>aside>div{
+    margin:10px 0;
+    border-bottom:red 2px solid ;
+    padding: 5px 0;
+
+}
+
+.wrapper>aside>div::first-letter{
+    color: red;
+    font-size:1.4em ;
+}
+
 .wrapper>footer {
-    background-color: #ddd;
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: #000;
+    color:white;
     grid-column-start: 1;
     grid-column-end: 3;
+}
+.wrapper>footer>div{
+    padding:10px;
+    text-align:center;
+
+
+}
+
+.wrapper>footer>div:last-child{
+    background-color: #333;
 }
