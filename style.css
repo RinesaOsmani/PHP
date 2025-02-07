@@ -46,6 +46,7 @@ nav ul li:hover {
     background-color: #111;
     grid-column-start: 1;
     grid-column-end: 3;
+    padding: 10px;
 }
 
 .wrapper>header>div:first-child{
@@ -120,4 +121,34 @@ nav ul li:hover {
 
 .wrapper>footer>div:last-child{
     background-color: #333;
+}
+
+@media only screen and (max-width:640px){
+.wrapper {
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+
+        .wrapper>article img {
+            float: none;
+            display: block;
+            width: 100%;
+            border: 0px;
+            margin: 0px;
+        }
+
+                .wrapper>aside {
+                    background-color: #000;
+                    color: white;
+                }
+                 .wrapper>aside, .wrapper>article{
+                    font-size: 0.9em;
+                    grid-column: 1/3;
+                 }
+
+                 .wrapper>footer {
+                     display: grid;
+                     grid-template-columns:  1fr;
+}
 }
