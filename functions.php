@@ -19,6 +19,5 @@ function authorize($condition, $status = Response::FORBIDDEN)
         abort($status);
     }
 
-
 }
 
