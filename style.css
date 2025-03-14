@@ -1,13 +1,27 @@
-body{}
+body{
+    background-color: cadetblue;
+}
 
+.brder{
+        border: 1px black solid;
+}
 
 .wrapper{
-    border:1px black solid;
-    max-width:1100px;
     margin:0 auto;
+    max-width: 100%;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    padding: 10px 0;
+    clear: both;
 }
 
 nav{
+    clear: both;
     text-align: center;
     padding: 10px 0;
     margin: 10px 0 0;
@@ -37,6 +51,7 @@ nav a:hover{
 }
 
 #main{
+    clear: both;
     width: 100%;
 }
 
@@ -48,4 +63,50 @@ nav a:hover{
 #second{
     background-color:#FFF;
     color:blue;
+}
+
+footer{
+    clear: both;
+    background-color: #222;
+    text-align: center;
+    padding-top: 35px;
+    color: #CCC;
+}
+@media screen and (min-width: 520px){
+    #first{
+        width: 48%;
+        float: left;
+    }
+    #second{
+        width: 48%;
+        float: right;
+    }
+}
+
+@media screen and (min-width: 800px){
+    body {
+            background-color: rgb(173, 36, 36);
+        }
+        nav{
+            float: left;
+            width: 20%;
+        }
+        nav li{
+            display: block;
+            padding: 10px 0px;
+            width: 90%;
+        }
+        nav{
+            padding-left: 20px ;
+        }
+        nav ul {
+            padding: 0;
+            margin: 0;
+        }
+}
+
+@media screen and (min-width: 1200px){
+    .wrapper{
+        max-width: 1100px;
+    }
 }
