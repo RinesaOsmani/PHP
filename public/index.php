@@ -11,6 +11,8 @@ try {
         require base_path("{$class}.php");
     });
 
+    require base_path('bootstrap.php');
+
 } catch (Exception $e) {
     dd($e);
 }
