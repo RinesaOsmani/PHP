@@ -19,19 +19,30 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-50 px-4 text-right sm:px-6 flex gap-x-4 justify-end">
-                    <a href="/notes"
-                        class="inline-flex items-center px-4 py-2 bg-gray-500 text-white text-sm font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <div class="bg-gray-50 px-4 py-3 text-right sm:px-6 flex gap-x-4 justify-end items-center">
+                    <button type="button" class="text-red-500 mr-auto"
+                        onclick="document.querySelector('#delete-form').submit()">Delete</button>
 
-                        Cancel
-                    </a>
-                    <button type="submit"
-                        class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Update
-                    </button>
+                    <div class="bg-gray-50 px-4 text-right sm:px-6 flex gap-x-4 justify-end">
+                        <a href="/notes"
+                            class="inline-flex items-center px-4 py-2 bg-gray-500 text-white text-sm font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+
+                            Cancel
+                        </a>
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Update
+                        </button>
+                    </div>
                 </div>
-            </div>
         </form>
+
+        <form id="delete-form" class="hidden" method="POST" action="/note">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="id" value="<?= $note['id'] ?>">
+        </form>
+    </div>
+    </div>
     </div>
 </main>
 
